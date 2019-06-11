@@ -1,28 +1,17 @@
 import React from 'react';
-import { Link, Route } from 'react-router-dom';
-import SubNav from './SubNav';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 
 export default function Nav({family}) {
-  // console.log(props.obj);
-  
-  const MyStyledHeader = styled.div`
-    background-color: grey;
-    display: flex;
-    flex-direction: column;
+  // console.log(family);
 
-  `;
-
-    const MyStyledLink = styled(Link)`
+  const MyStyledLink = styled(Link)`
     text-decoration: none;
     color: white;
   `;
 
 	return (
-		<MyStyledHeader>
-			<MyStyledLink to={family.link}>{family.label}</MyStyledLink>
-
-		</MyStyledHeader>
+	  <MyStyledLink to={family.link}>{family.label}</MyStyledLink>
 	);
 }

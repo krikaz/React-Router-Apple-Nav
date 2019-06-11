@@ -4,19 +4,21 @@ import styled from 'styled-components';
 
 
 export default function SubNav({products}) {
-  // console.log(props);
+  // console.log(products);
 
-//   const MyStyledDiv = styled(Link)`
-//   text-decoration: none;
-//   color: white;
-// `;
+	const Bottom = styled.div`
+		background-color: lightblue;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+	`;
 
 
 	return (
-		<div>
+		<Bottom>
 			{products.map(product => (
 				<div>{product}</div>
 			))}
-		</div>
+		</Bottom>
 	);
 }
