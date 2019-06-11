@@ -26,7 +26,7 @@ export default function NavWrapper({ data }) {
 		<MyStyledWrapper>
 			<Top>
 				{data.map(family => (
-					<Nav key={family.label} family={family} />
+					<Nav family={family} />
 				))}
 			</Top>
 
