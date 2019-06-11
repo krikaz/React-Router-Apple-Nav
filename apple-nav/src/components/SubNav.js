@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 
 
-export default function SubNav(props) {
+export default function SubNav({products}) {
   // console.log(props);
 
 //   const MyStyledDiv = styled(Link)`
@@ -14,7 +14,7 @@ export default function SubNav(props) {
 
 	return (
 		<div>
-			{props.props.map(product => (
+			{products.map(product => (
 				<div>{product}</div>
 			))}
 		</div>

@@ -4,12 +4,13 @@ import SubNav from './SubNav';
 import styled from 'styled-components';
 
 
-export default function Nav(props) {
+export default function Nav({family}) {
   // console.log(props.obj);
   
   const MyStyledHeader = styled.div`
     background-color: grey;
     display: flex;
+    flex-direction: column;
 
   `;
 
@@ -20,12 +21,8 @@ export default function Nav(props) {
 
 	return (
 		<MyStyledHeader>
-			<MyStyledLink to={props.obj.link}>{props.obj.label}</MyStyledLink>
-			<Route
-				exact
-				path={props.obj.link}
-				render={test => <SubNav {...test} props={props.obj.products} />}
-			/>
+			<MyStyledLink to={family.link}>{family.label}</MyStyledLink>
+
 		</MyStyledHeader>
 	);
 }
